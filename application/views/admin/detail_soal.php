@@ -2,7 +2,6 @@
     <div class="panel panel-info">
         <div class="panel-heading">Data Soal
             <div style="margin-top: -5px; float: right;">
-                <a href='<?php echo base_url(); ?>adm/m_soal/cetak/<?php echo $uri4; ?>' class='btn btn-info btn-sm' target='_blank'><i class='glyphicon glyphicon-print'></i> Cetak</a>
                 <a href='<?php echo base_url('soal'); ?>' class='btn btn-warning btn-sm'><i class='glyphicon glyphicon-arrow-left'></i> Kembali</a>
             </div>
         </div>
@@ -96,17 +95,17 @@
                     <div id="konfirmasi"></div>
                     <table class="table table-form">
                         <tr>
-                            <td class="" colspan="2" style="width: 20%">Gambar Soal</td>
+                            <td class="" colspan="2" style="width: 20%"></td>
                             <td style="width: 80%">
                                 <input type="hidden" name="id_soal" id="id_soal" class="form-control">
                                 <input type="hidden" name="id_latihan" id="id_latihan" class="form-control">
-                                <input type="file" name="gambar_soal" id="gambar_soal" class="form-control">
+                                <!-- <input type="file" name="gambar_soal" id="gambar_soal" class="form-control"> -->
                             </td>
                         </tr>
                         <tr>
-                            <td class="" colspan="2" style="width: 20%">Bobot Soal</td>
+                            <td class="" colspan="2" style="width: 20%"></td>
                             <td style="width: 80%">
-                                <input type="number" name="bobot_soal" id="bobot_soal" class="form-control" required>
+                                <input type="hidden" name="bobot_soal" id="bobot_soal" value="1" class="form-control" required>
                             </td>
                         </tr>
                         <tr>

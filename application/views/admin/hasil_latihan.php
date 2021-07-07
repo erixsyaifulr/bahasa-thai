@@ -30,16 +30,16 @@
                         <div id="konfirmasi"></div>
                         <table class="table table-form">
                             <tr>
-                                <td class="" colspan="2" style="width: 20%">Gambar Soal</td>
+                                <td class="" colspan="2" style="width: 20%"></td>
                                 <td style="width: 80%">
                                     <input type="hidden" name="id_latihan" id="id_latihan" class="form-control">
-                                    <input type="file" name="gambar_soal" id="gambar_soal" class="form-control">
+                                    <!-- <input type="file" name="gambar_soal" id="gambar_soal" class="form-control"> -->
                                 </td>
                             </tr>
                             <tr>
-                                <td class="" colspan="2" style="width: 20%">Bobot Soal</td>
+                                <td class="" colspan="2" style="width: 20%"></td>
                                 <td style="width: 80%">
-                                    <input type="number" name="bobot_soal" id="bobot_soal" class="form-control" required>
+                                    <input type="hidden" value="1" name="bobot_soal" id="bobot_soal" class="form-control" required>
                                 </td>
                             </tr>
                             <tr>

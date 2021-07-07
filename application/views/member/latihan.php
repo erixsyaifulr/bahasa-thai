@@ -1,6 +1,8 @@
 <div class="box">
     <div class="box-header">
         <h3 class="box-title">Data Latihan</h3>
+        <input type="hidden" id="sukses_simpan" value="<?php echo $this->session->flashdata('sukses_simpan_jawaban'); ?>">
+
     </div>
     <div class="box-body table-responsive">
         <table class="table table-bordered table striped table-hover">
@@ -46,3 +48,18 @@
         </table>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+
+        const sukses_simpan_jawaban = $('#sukses_simpan').val();
+
+        if (sukses_simpan_jawaban) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Saved!',
+                text: sukses_simpan_jawaban
+            })
+        }
+    });
+</script>

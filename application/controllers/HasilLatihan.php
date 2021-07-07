@@ -31,4 +31,12 @@ class HasilLatihan extends MY_Controller
         $data['row'] = $this->HasilLatihanModel->get($id);
         $this->template->load('layouts/template', 'member/hasil_latihan', $data);
     }
+
+    public function hasil_latihan_detail()
+    {
+        $post = $this->input->post(null, TRUE);
+        $data = konfigurasi('Hasil Latihan');
+        $data['row'] = $this->HasilLatihanModel->get_detail($post);
+        $this->template->load('layouts/template', 'admin/hasil_latihan_detail', $data);
+    }
 }

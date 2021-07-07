@@ -85,13 +85,14 @@ class Soal extends MY_Controller
             }
         }
         $list_id_soal = substr($list_id_soal, 0, -1);
-        $date = date("Y/m/d h:m:s");
+        date_default_timezone_set('Asia/Jakarta');
+        $date = date("Y/m/d H:i:s");
 
         $this->db->query("INSERT INTO tbl_hasil_latihan VALUES (null, '$id_latihan', '$id_user', '$list_id_soal', '$update_', '$jumlah_benar', '$jumlah_bobot', '$nilai', '$date')");
         if ($this->db->affected_rows() > 0) {
             $this->session->set_flashdata('sukses_simpan_jawaban', 'Jawaban berhasil disimpan');
         }
-        echo "<script>window.location='" . site_url('soal') . "';</script>";
+        echo "<script>window.location='" . site_url('soal/user') . "';</script>";
     }
 
     public function detail_per_soal($id)

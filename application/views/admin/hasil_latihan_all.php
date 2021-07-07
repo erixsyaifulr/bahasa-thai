@@ -22,7 +22,11 @@
                         <td style="text-align: center;"><?= $data->nama_latihan ?></td>
                         <td style="text-align: center;"><?= $data->nilai_bobot ?></td>
                         <td class="text-center">
-                            tes
+                            <form action="<?= site_url('hasillatihan/hasil_latihan_detail') ?>" method="POST">
+                                <input type="hidden" name="id_latihan" value="<?= $data->id_latihan ?>">
+                                <input type="hidden" name="id_user" value="<?= $data->id_user ?>">
+                                <input type="submit" name="submit" value="Lihat Hasil" class="btn btn-success btn-xs">
+                            </form>
                         </td>
                     </tr>
                 <?php
