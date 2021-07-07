@@ -28,7 +28,7 @@ $jumlah_salah = $jumlah_soal - $jumlah_benar;
 <div class="box">
     <div class="box-body table-responsive">
         <div style="float: right;">
-            <a href="<?= site_url('HasilLatihan/cetak/' . $data->id_latihan) ?>" class="btn btn-success" target="_blank"><i class="fa fa-fw fa-print"></i> Cetak</a>
+            <a href="<?= site_url('Pdfview/index/' . $data->id_latihan) ?>" class="btn btn-success" target="_blank"><i class="fa fa-fw fa-print"></i> Cetak</a>
         </div>
         <h3>Data Peserta</h3>
         <table>

@@ -14,8 +14,15 @@ class HasilLatihan extends MY_Controller
     public function index()
     {
         $data = konfigurasi('Hasil Latihan');
-        // $data['row'] = $this->User_model->get();
+        // $data['row'] = $this->HasilLatihanModel->get_latihan();
         $this->template->load('layouts/template', 'admin/hasil_latihan', $data);
+    }
+
+    public function index_detail($id)
+    {
+        $data = konfigurasi('Hasil Latihan');
+        $data['row'] = $this->HasilLatihanModel->get_hasil_all($id);
+        $this->template->load('layouts/template', 'admin/hasil_latihan_all', $data);
     }
 
     public function hasil_latihan($id)
@@ -23,20 +30,5 @@ class HasilLatihan extends MY_Controller
         $data = konfigurasi('Hasil Latihan');
         $data['row'] = $this->HasilLatihanModel->get($id);
         $this->template->load('layouts/template', 'member/hasil_latihan', $data);
-    }
-
-    public function cetak($id)
-    {
-        ob_start();
-        $data['row'] = $this->HasilLatihanModel->get($id);
-        $this->load->view('member/print', $data);
-        $html = ob_get_contents();
-        ob_end_clean();
-
-        require './assets/html2pdf/autoload.php';
-
-        $pdf = new Spipu\Html2Pdf\Html2Pdf('P', 'A4', 'en');
-        $pdf->WriteHTML($html);
-        $pdf->Output('Hasil Latihan.pdf', 'D');
     }
 }

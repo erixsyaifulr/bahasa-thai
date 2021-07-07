@@ -1,22 +1,22 @@
-<!-- <?php
-        foreach ($row->result() as $key => $data) {
-            $listsoal = $data->list_soal;
-            $listjawaban = $data->list_jawaban;
-            $jumlah_benar = $data->jumlah_benar;
-            $nilai_bobot = $data->nilai_bobot;
-            $tgl_mulai = $data->tgl_mulai;
-            $first_name = $data->first_name;
-            $last_name = $data->last_name;
-            $username = $data->username;
-            $email = $data->email;
-            $phone = $data->phone;
-            $nama_latihan = $data->nama_latihan;
-            $deskripsi = $data->deskripsi;
-        }
-        $soal = explode(',', $listsoal);
-        $jumlah_soal = count($soal);
-        $jumlah_salah = $jumlah_soal - $jumlah_benar;
-        ?>
+<?php
+foreach ($row->result() as $key => $data) {
+    $listsoal = $data->list_soal;
+    $listjawaban = $data->list_jawaban;
+    $jumlah_benar = $data->jumlah_benar;
+    $nilai_bobot = $data->nilai_bobot;
+    $tgl_mulai = $data->tgl_mulai;
+    $first_name = $data->first_name;
+    $last_name = $data->last_name;
+    $username = $data->username;
+    $email = $data->email;
+    $phone = $data->phone;
+    $nama_latihan = $data->nama_latihan;
+    $deskripsi = $data->deskripsi;
+}
+$soal = explode(',', $listsoal);
+$jumlah_soal = count($soal);
+$jumlah_salah = $jumlah_soal - $jumlah_benar;
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -148,22 +148,6 @@
             </table>
         </div>
     </div>
-</body>
-
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    asaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 </body>
 
 </html>

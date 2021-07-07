@@ -16,4 +16,34 @@ class HasilLatihanModel extends CI_Model
         $query = $this->db->get();
         return $query;
     }
+
+    public function get_latihan($id = null)
+    {
+        $this->db->from('tbl_latihan');
+        if ($id != null) {
+            $this->db->where('id_latihan', $id);
+        }
+        $query = $this->db->get();
+        return $query;
+    }
+
+    public function get_hasil_all($id_lat)
+    {
+        $this->db->select('hl.id_latihan, hl.nilai_bobot, hl.tgl_mulai, u.first_name, u.last_name, l.nama_latihan');
+        $this->db->where('hl.id_latihan', $id_lat);
+        $this->db->join('tbl_user u', 'u.id = hl.id_user', 'left');
+        $this->db->join('tbl_latihan l', 'l.id_latihan = hl.id_latihan', 'left');
+        $this->db->from('tbl_hasil_latihan hl');
+        $query = $this->db->get();
+        return $query;
+    }
+
+    public function get_hasil_user($id_lat, $id_us)
+    {
+        $this->db->where('id_latihan', $id_lat);
+        $this->db->where('id_user', $id_us);
+        $this->db->from('tbl_hasil_latihan');
+        $query = $this->db->get();
+        return $query;
+    }
 }
